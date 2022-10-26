@@ -14,7 +14,7 @@ public class Ejercicio5 {
 		 * - suman: Se inicializa a 0. Es la suma de los número negativos
 		 * - nnegativos: Se incializa a 0. Es el número total de veces que el usuario ha introducido un número negativo
 		 */
-		int numero, i = 0, suma = 0, nceros = 0, suman = 0, nnegativo = 0;
+		int numero, i = 1, suma = 0, nceros = 0, suman = 0, nnegativo = 0;
 		
 		//Creamos el scanner y lo nombramos "sc"
 		Scanner sc = new Scanner(System.in);
