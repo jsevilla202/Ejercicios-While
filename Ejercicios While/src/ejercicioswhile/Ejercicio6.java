@@ -28,6 +28,7 @@ public class Ejercicio6 {
 		System.out.println("La suma total de las edades es de: "+edadtotal+"\nLa media de las edades es: "+(double)(edadtotal/nalumnos)+
 				"\nEl número de alumnos es: "+nalumnos+"\nHay un total de "+mayoredad+" alumnos mayores de edad");
 		}
+		sc.close();
 
 	}
 
