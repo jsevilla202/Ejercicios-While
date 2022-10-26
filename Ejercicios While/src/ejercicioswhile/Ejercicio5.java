@@ -14,7 +14,7 @@ public class Ejercicio5 {
 		 * - suman: Se inicializa a 0. Es la suma de los número negativos
 		 * - nnegativos: Se incializa a 0. Es el número total de veces que el usuario ha introducido un número negativo
 		 */
-		int numero, i = 1, suma = 0, nceros = 0, suman = 0, nnegativo = 0;
+		int numero, i = 0, suma = 0, nceros = 0, suman = 0, nnegativo = 0;
 		
 		//Creamos el scanner y lo nombramos "sc"
 		Scanner sc = new Scanner(System.in);
@@ -23,13 +23,13 @@ public class Ejercicio5 {
 		System.out.print("A continuación, inserte 10 número, pueden ser positivos o negativos, y al finalizar se mostrara:"
 				+ "\nLa suma de los números positivos\nLa media de los números negativos"
 				+ "\nEl número de ceros que ha introducido\n");
-		//Pedimos al usuario que inserte el primer número
-		System.out.print("Inserte el primer número, por favor: ");
-		//Capturamos lo que ha introducido el usuario y lo guardamos en la variable "numero"
-		numero = sc.nextInt();
 		
 		//Creamos un bucle que se repita 10 veces, el cual contiene
 		while(i!=10) {
+			//Pedimos al usuario que inserte un número
+			System.out.print("Inserte un número, por favor: ");
+			//Capturamos lo que ha introducido el usuario y lo guardamos en la variable "numero"
+			numero = sc.nextInt();
 			//Comprueba si el número es positivo
 			if(numero>0) {
 				//Si lo es, suma el número con el anterior y lo almacena en la misma variable
@@ -49,16 +49,13 @@ public class Ejercicio5 {
 			}
 			//Suma 1 al contador de vueltas
 			i++;
-			//pedimos al usuario que inserte otro número
-			System.out.print("Inserte otro número: ");
-			//Capturamos lo que ha introducido el usuario y lo guardamos en la variable "numero"
-			numero = sc.nextInt();
 		}
 		//Por ultimo mostramos por consola:
 		//La suma total de los números positivos
 		System.out.println("La suma total de los números positivos es: "+ suma);
 		//La media total de los números negativos
-		System.out.println("La media total de los numero negativos es: "+suman/nnegativo);
+		System.out.println(nnegativo==0?"No se puede hacer media de los número negativos porque no se ha introducido ninguno"
+				:"La media total de los numero negativos es: "+(float)suman/nnegativo);
 		//La cantidd de 0 introducidos
 		System.out.println("El número total de 0 es: "+nceros);
 		//Cerramos el scanner

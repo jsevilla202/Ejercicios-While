@@ -31,7 +31,7 @@ public class Ejercicio3 {
 			numero = sc.nextInt();
 		}
 		//Una vez introducido un número negativo, el programa saldrá del bucle y mostrará la media total
-		System.out.println("La media total es "+suma/i);
+		System.out.println("La media total es "+(float)suma/i);
 		//Cerramos el scanner
 		sc.close();
 
