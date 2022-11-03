@@ -36,32 +36,25 @@ public class Ejercicio8 {
 			while(altura!=-1) {
 				if(altura>alto) {
 					alto = altura;
-					System.out.print("Introduzca la altura de otro árbol en cm: ");
-					altura = sc.nextInt();
 				}
-				else{
-					if(altura<0&&altura!=-1) {
+				else if(altura<0) {
 					System.out.println("La altura no puede ser negativa");
-					System.out.print("Introduzca la altura de otro árbol en cm: ");
-					altura = sc.nextInt();
 					}
-					else {
-						System.out.print("Introduzca la altura de otro árbol en cm: ");
-						altura = sc.nextInt();
-					}
+				System.out.print("Introduzca la altura de otro árbol en cm: ");
+				altura = sc.nextInt();
 				}
 			}
-			//Mostramos por pantalla la altura más alta introducida
-			System.out.println("El árbol más alto es el que mide "+alto+" cm");
-		}
+		
 		//Si la altura introducida es -1, salimos del programa
-			else if(altura==-1) {
+		else if(altura==-1) {
 				System.out.println("Saliendo del programa");
 			}
 		//En otro caso la altura será negativa y se lo decimos al usuario por consola
 			else {
 				System.out.println("ERROR: La altura no puede ser negativa");
 			}
+			//Mostramos por pantalla la altura más alta introducida
+			System.out.println("El árbol más alto es el que mide "+alto+" cm");
 		//cerramos el scanner
 		sc.close();
 
